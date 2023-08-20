@@ -26,28 +26,28 @@
 ## 设置与注意点
 
 - 主路由：
-	安装爱快，双线接入4口网卡 1,2 口，设置 wan1 wan2 
-	设置LAN1 桥接其它 4 个端口
-	设置DNS地址分别为 2个光猫的内网IP , <font color="#c00000">DNS 代理不要开启</font>
-	设置DHCP 网关为 爱快LAN1地址，DNS为 自建DNS服务器址。
-	设置 静态IP 需要科学上网的网关为旁路网关(旁路由)
-	新建2个虚拟机，CPU选1核，内存512就行
+	- 安装爱快，双线接入4口网卡 1,2 口，设置 wan1 wan2
+	- 设置LAN1 桥接其它 4 个端口
+	- 设置DNS地址分别为 2个光猫的内网IP , <font color="#c00000">DNS 代理不要开启</font>
+	- 设置DHCP 网关为 爱快LAN1地址，DNS为 自建DNS服务器址。
+	- 设置 静态IP 需要科学上网的网关为旁路网关(旁路由)
+	- 新建2个虚拟机，CPU选1核，内存512就行
 - 旁路网关(旁路由)：
-	安装 https://downloads.immortalwrt.org/ 最新版就行
-	在软件包删除 dnsmsaq 即在网络选项中没有DHCP/DNS 这一项
-	接口建议使用eth0，可以删除桥接br-lan
-	LAN接口设置网关为 主路由地址，DNS地址为 自建DNS服务器
-	在软件包中安装 HomeProxy 
-	HomeProxy 设置DNS为 <font color="#c00000">WAN下发DNS</font> ,国内DNS默认<font color="#c00000">禁用</font>
-	添加节点后启用
+	- 安装 https://downloads.immortalwrt.org/ 最新版就行
+	- 在软件包删除 dnsmsaq 即在网络选项中没有DHCP/DNS 这一项
+	- 接口建议使用eth0，可以删除桥接br-lan
+	- LAN接口设置网关为 主路由地址，DNS地址为 自建DNS服务器
+	- 在软件包中安装 HomeProxy 
+	- HomeProxy 设置DNS为 <font color="#c00000">WAN下发DNS</font> ,国内DNS默认<font color="#c00000">禁用</font>
+	- 添加节点后启用
 - DNS服务器设置
-	安装 https://downloads.immortalwrt.org/ 
-	同样删除 dnsmsaq
-	接口设置网关同上，DNS地址为 127.0.0.1 (MOSDNS设置前为运营商地址)
-	软件包安装 MosDNS 软件包可能没有LUCI https://github.com/sbwml/luci-app-mosdns 这里下载
-	MosDNS 设置 <font color="#c00000">监听端口为 53 ，目的是接管默认DNS端口</font>
-	上游DNS随便选，远程DNS即科学DNS我设置是1.1.1.3
-	MosDNS设置黑名单屏蔽18+内容，具体列表在清单中
+	- 安装 https://downloads.immortalwrt.org/ 
+	- 同样删除 dnsmsaq
+	- 接口设置网关同上，DNS地址为 127.0.0.1 (MOSDNS设置前为运营商地址)
+	- 软件包安装 MosDNS 软件包可能没有LUCI https://github.com/sbwml/luci-app-mosdns 这里下载
+	- MosDNS 设置 <font color="#c00000">监听端口为 53 ，目的是接管默认DNS端口</font>
+	- 上游DNS随便选，远程DNS即科学DNS我设置是1.1.1.3
+	- MosDNS设置黑名单屏蔽18+内容，具体列表在清单中
 
 ## 总结
 

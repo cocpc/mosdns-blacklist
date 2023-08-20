@@ -1,4 +1,4 @@
-# 自用组网方案 ikuai + openwrt homeproxy mosdns 
+# 自用软路由组网方案 ikuai + openwrt homeproxy mosdns 
 
 
 ## 组网需求

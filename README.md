@@ -43,7 +43,7 @@
 - DNS服务器设置
 	- 安装 https://downloads.immortalwrt.org/ 
 	- 同样删除 dnsmsaq
-	- 接口设置网关同上，DNS地址为 127.0.0.1 (MOSDNS设置前为运营商地址)
+	- 接口设置网关同上，DNS地址为 127.0.0.1 
 	- 软件包安装 MosDNS 软件包可能没有LUCI https://github.com/sbwml/luci-app-mosdns 这里下载
 	- MosDNS 设置 <font color="#c00000">监听端口为 53 ，目的是接管默认DNS端口</font>
 	- 上游DNS随便选，远程DNS即科学DNS我设置是1.1.1.3
